@@ -5,6 +5,9 @@ package com.bojo;
  */
 public class GoodsType {
 
+    /**
+     * id
+     */
     private String id;
     private String name;
 
