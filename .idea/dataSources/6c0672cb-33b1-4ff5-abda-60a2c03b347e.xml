@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="goods@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.0">
+    <root id="1"/>
+    <schema id="2" parent="1" name="goods">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="information_schema"/>
+    <schema id="4" parent="1" name="libraries"/>
+    <schema id="5" parent="1" name="msql"/>
+    <schema id="6" parent="1" name="mysql"/>
+    <schema id="7" parent="1" name="performance_schema"/>
+    <schema id="8" parent="1" name="project"/>
+    <schema id="9" parent="1" name="sys"/>
+    <schema id="10" parent="1" name="text"/>
+    <schema id="11" parent="1" name="goods_lee"/>
+    <table id="12" parent="2" name="goods"/>
+    <table id="13" parent="2" name="goodstype"/>
+    <table id="14" parent="2" name="manager"/>
+    <table id="15" parent="2" name="shelf"/>
+    <table id="16" parent="2" name="supplier"/>
+    <table id="17" parent="2" name="warehouse"/>
+    <table id="18" parent="2" name="warein"/>
+    <table id="19" parent="2" name="wareinlist"/>
+    <table id="20" parent="2" name="wareout"/>
+    <table id="21" parent="2" name="wareoutlist"/>
+    <column id="22" parent="12" name="id">
+      <Position>1</Position>
+      <DataType>varchar(50)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="23" parent="12" name="name">
+      <Position>2</Position>
+      <DataType>varchar(100)|0</DataType>
+    </column>
+    <column id="24" parent="12" name="price">
+      <Position>3</Position>
+      <DataType>double(8,2)|0</DataType>
+    </column>
+    <column id="25" parent="12" name="anount">
+      <Position>4</Position>
+      <DataType>varchar(100)|0</DataType>
+    </column>
+    <column id="26" parent="12" name="remarks">
+      <Position>5</Position>
+      <DataType>varchar(100)|0</DataType>
+    </column>
+    <column id="27" parent="12" name="t_id">
+      <Position>6</Position>
+      <DataType>varchar(50)|0</DataType>
+    </column>
+    <index id="28" parent="12" name="t_id">
+      <ColNames>t_id</ColNames>
+    </index>
+    <key id="29" parent="12" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="30" parent="12" name="goods_ibfk_1">
+      <ColNames>t_id</ColNames>
+      <RefSchemaName>goods</RefSchemaName>
+      <RefTableName>goodstype</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="31" parent="13" name="id">
+      <Position>1</Position>
+      <DataType>varchar(50)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="32" parent="13" name="name">
+      <Position>2</Position>
+      <DataType>varchar(100)|0</DataType>
+    </column>
+    <key id="33" parent="13" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="34" parent="14" name="id">
+      <Position>1</Position>
+      <DataType>varchar(50)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="35" parent="14" name="name">
+      <Position>2</Position>
+      <DataType>varchar(100)|0</DataType>
+    </column>
+    <column id="36" parent="14" name="account">
+      <Position>3</Position>
+      <DataType>varchar(100)|0</DataType>
+    </column>
+    <column id="37" parent="14" name="password">
+      <Position>4</Position>
+      <DataType>varchar(100)|0</DataType>
+    </column>
+    <column id="38" parent="14" name="phone">
+      <Position>5</Position>
+      <DataType>varchar(100)|0</DataType>
+    </column>
+    <column id="39" parent="14" name="job">
+      <Position>6</Position>
+      <DataType>varchar(100)|0</DataType>
+    </column>
+    <key id="40" parent="14" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="41" parent="15" name="id">
+      <Position>1</Position>
+      <DataType>varchar(50)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="42" parent="15" name="number">
+      <Position>2</Position>
+      <DataType>varchar(50)|0</DataType>
+    </column>
+    <column id="43" parent="15" name="remarks">
+      <Position>3</Position>
+      <DataType>varchar(100)|0</DataType>
+    </column>
+    <column id="44" parent="15" name="w_id">
+      <Position>4</Position>
+      <DataType>varchar(50)|0</DataType>
+    </column>
+    <index id="45" parent="15" name="w_id">
+      <ColNames>w_id</ColNames>
+    </index>
+    <key id="46" parent="15" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="47" parent="15" name="shelf_ibfk_1">
+      <ColNames>w_id</ColNames>
+      <RefSchemaName>goods</RefSchemaName>
+      <RefTableName>warehouse</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="48" parent="16" name="id">
+      <Position>1</Position>
+      <DataType>varchar(50)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="49" parent="16" name="name">
+      <Position>2</Position>
+      <DataType>varchar(100)|0</DataType>
+    </column>
+    <column id="50" parent="16" name="phone">
+      <Position>3</Position>
+      <DataType>varchar(100)|0</DataType>
+    </column>
+    <column id="51" parent="16" name="address">
+      <Position>4</Position>
+      <DataType>varchar(100)|0</DataType>
+    </column>
+    <key id="52" parent="16" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="53" parent="17" name="id">
+      <Position>1</Position>
+      <DataType>varchar(50)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="54" parent="17" name="number">
+      <Position>2</Position>
+      <DataType>varchar(50)|0</DataType>
+    </column>
+    <column id="55" parent="17" name="name">
+      <Position>3</Position>
+      <DataType>varchar(100)|0</DataType>
+    </column>
+    <column id="56" parent="17" name="remarks">
+      <Position>4</Position>
+      <DataType>varchar(100)|0</DataType>
+    </column>
+    <key id="57" parent="17" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="58" parent="18" name="id">
+      <Position>1</Position>
+      <DataType>varchar(50)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="59" parent="18" name="number">
+      <Position>2</Position>
+      <DataType>varchar(50)|0</DataType>
+    </column>
+    <column id="60" parent="18" name="intime">
+      <Position>3</Position>
+      <DataType>timestamp|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+    </column>
+    <column id="61" parent="18" name="m_id">
+      <Position>4</Position>
+      <DataType>varchar(50)|0</DataType>
+    </column>
+    <index id="62" parent="18" name="m_id">
+      <ColNames>m_id</ColNames>
+    </index>
+    <key id="63" parent="18" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="64" parent="18" name="warein_ibfk_1">
+      <ColNames>m_id</ColNames>
+      <RefSchemaName>goods</RefSchemaName>
+      <RefTableName>manager</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="65" parent="19" name="id">
+      <Position>1</Position>
+      <DataType>varchar(50)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="66" parent="19" name="amount">
+      <Position>2</Position>
+      <DataType>varchar(100)|0</DataType>
+    </column>
+    <column id="67" parent="19" name="amountless">
+      <Position>3</Position>
+      <DataType>varchar(100)|0</DataType>
+    </column>
+    <column id="68" parent="19" name="g_id">
+      <Position>4</Position>
+      <DataType>varchar(50)|0</DataType>
+    </column>
+    <column id="69" parent="19" name="s_id">
+      <Position>5</Position>
+      <DataType>varchar(50)|0</DataType>
+    </column>
+    <column id="70" parent="19" name="su_id">
+      <Position>6</Position>
+      <DataType>varchar(50)|0</DataType>
+    </column>
+    <column id="71" parent="19" name="wi_id">
+      <Position>7</Position>
+      <DataType>varchar(50)|0</DataType>
+    </column>
+    <index id="72" parent="19" name="g_id">
+      <ColNames>g_id</ColNames>
+    </index>
+    <index id="73" parent="19" name="su_id">
+      <ColNames>su_id</ColNames>
+    </index>
+    <index id="74" parent="19" name="s_id">
+      <ColNames>s_id</ColNames>
+    </index>
+    <index id="75" parent="19" name="wareinlist_fk_4">
+      <ColNames>wi_id</ColNames>
+    </index>
+    <key id="76" parent="19" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="77" parent="19" name="wareinlist_ibfk_1">
+      <ColNames>g_id</ColNames>
+      <RefSchemaName>goods</RefSchemaName>
+      <RefTableName>goods</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="78" parent="19" name="wareinlist_ibfk_2">
+      <ColNames>s_id</ColNames>
+      <RefSchemaName>goods</RefSchemaName>
+      <RefTableName>shelf</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="79" parent="19" name="wareinlist_ibfk_3">
+      <ColNames>su_id</ColNames>
+      <RefSchemaName>goods</RefSchemaName>
+      <RefTableName>supplier</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="80" parent="19" name="wareinlist_fk_4">
+      <ColNames>wi_id</ColNames>
+      <RefSchemaName>goods</RefSchemaName>
+      <RefTableName>warein</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="81" parent="20" name="id">
+      <Position>1</Position>
+      <DataType>varchar(50)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="82" parent="20" name="number">
+      <Position>2</Position>
+      <DataType>varchar(50)|0</DataType>
+    </column>
+    <column id="83" parent="20" name="outtime">
+      <Position>3</Position>
+      <DataType>timestamp|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+    </column>
+    <column id="84" parent="20" name="m_id">
+      <Position>4</Position>
+      <DataType>varchar(50)|0</DataType>
+    </column>
+    <index id="85" parent="20" name="m_id">
+      <ColNames>m_id</ColNames>
+    </index>
+    <key id="86" parent="20" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="87" parent="20" name="wareout_ibfk_1">
+      <ColNames>m_id</ColNames>
+      <RefSchemaName>goods</RefSchemaName>
+      <RefTableName>manager</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="88" parent="21" name="id">
+      <Position>1</Position>
+      <DataType>varchar(50)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="89" parent="21" name="amount">
+      <Position>2</Position>
+      <DataType>varchar(100)|0</DataType>
+    </column>
+    <column id="90" parent="21" name="g_id">
+      <Position>3</Position>
+      <DataType>varchar(50)|0</DataType>
+    </column>
+    <column id="91" parent="21" name="wil_id">
+      <Position>4</Position>
+      <DataType>varchar(50)|0</DataType>
+    </column>
+    <column id="92" parent="21" name="wo_id">
+      <Position>5</Position>
+      <DataType>varchar(50)|0</DataType>
+    </column>
+    <index id="93" parent="21" name="g_id">
+      <ColNames>g_id</ColNames>
+    </index>
+    <index id="94" parent="21" name="wil_id">
+      <ColNames>wil_id</ColNames>
+    </index>
+    <index id="95" parent="21" name="wareoutlist_fk_4">
+      <ColNames>wo_id</ColNames>
+    </index>
+    <key id="96" parent="21" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="97" parent="21" name="wareoutlist_ibfk_1">
+      <ColNames>g_id</ColNames>
+      <RefSchemaName>goods</RefSchemaName>
+      <RefTableName>goods</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="98" parent="21" name="wareoutlist_ibfk_2">
+      <ColNames>wil_id</ColNames>
+      <RefSchemaName>goods</RefSchemaName>
+      <RefTableName>wareinlist</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="99" parent="21" name="wareoutlist_fk_4">
+      <ColNames>wo_id</ColNames>
+      <RefSchemaName>goods</RefSchemaName>
+      <RefTableName>wareout</RefTableName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+  </database-model>
+</dataSource>
