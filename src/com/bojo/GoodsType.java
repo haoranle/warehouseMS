@@ -33,5 +33,6 @@ public class GoodsType {
                 "id='" + id + '\'' +
                 ", name='" + name + '\'' +
                 '}';
+        // TODO GIT
     }
 }
