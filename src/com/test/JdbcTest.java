@@ -4,8 +4,11 @@ import java.sql.*;
 
 /**
  * Created by 李浩然 on 2017/1/7.
+ * 修改這個的是好孩子 that is good boy who edit this source
  */
 public class JdbcTest {
+    public JdbcTest() {
+    }
 
     public static void main(String[] args) {
 
